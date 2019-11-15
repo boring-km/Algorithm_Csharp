@@ -1,12 +1,11 @@
 using System;
 using System.Text;
 namespace dev_cs {
-    public class Backjoon_1920 {
-        public Backjoon_1920() {
+    public class Baekjoon_1920 {
+        public Baekjoon_1920() {
             int n = Convert.ToInt32(Console.ReadLine());
             string[] temp_a = Console.ReadLine().Split(" ");
             int[] A = new int[n];
-            
             for (int i = 0; i < n; i++) {
                 A[i] = Convert.ToInt32(temp_a[i]);
             }
@@ -21,7 +20,7 @@ namespace dev_cs {
             int left = 0;
             int right = n-1;    
             int mid = (left + right) / 2;
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder(); // 시간초과를 막기 위해서..!
             for(int i = 0; i < m; i++) {// 필수
                 while(right-left >= 0) {// 이걸 줄이자
                     if(A[mid] == B[i]) {
